@@ -18,5 +18,5 @@ jobs:
       - name: scan code for vulnerabilities
         run: |
           echo Downloading cdefense CLI
-          curl https://raw.githubusercontent.com/kaushik94/cdefense-delta/main/linux-amd64-go-build > /usr/local/bin/cdefense && chmod +x /usr/local/bin/cdefense
+          curl https://raw.githubusercontent.com/kaushik94/cdefense-delta/blob/main/delta-scan-packr-build > /usr/local/bin/cdefense && chmod +x /usr/local/bin/cdefense
           cdefense online --api-key=b8ba2b0d-db93-4805-a916-65a469a7329d --repository-url="$REPO_URL" --pr-id="$GITHUB_PR_NUMBER"
