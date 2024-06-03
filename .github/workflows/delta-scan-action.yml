@@ -18,6 +18,5 @@ jobs:
       - name: scan code for vulnerabilities
         run: |
           echo Downloading cdefense CLI
-          export SCAN_URL=https://dev.clouddefenseai.com/applications
           curl -L https://github.com/CloudDefenseAI/cd/releases/download/1.38.4/cd-latest-linux-x64.tar.gz > /tmp/cd-latest-linux-x64.tar.gz && tar -C /usr/local/bin -xzf /tmp/cd-latest-linux-x64.tar.gz && chmod +x /usr/local/bin/cd-latest-linux-x64
-          cd-latest-linux-x64 online --api-key=32762768-54f7-4a53-af05-5bc7835bf9a2 --repository-url="$REPO_URL" --pr-id="$GITHUB_PR_NUMBER" --type=GITHUB
+          cd-latest-linux-x64 online --api-key=496012c5-1625-4139-ab64-935512ca094f --repository-url="$REPO_URL" --pr-id="$GITHUB_PR_NUMBER" --type=GITHUB
